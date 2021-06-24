@@ -25,6 +25,8 @@ const Rating = ({value, text, color}) => {
   )
 }
 
+// Need to update width size of the add to car button
+
 Rating.defaultProps = {
   color: '#f8e825',
 }
