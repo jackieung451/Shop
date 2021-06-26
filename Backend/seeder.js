@@ -18,7 +18,9 @@ const importData = async () => {
       await Product.deleteMany()
       await User.deleteMany()
 
-      const createUsers = await User.insertMany(users)
+    
+
+      const createdUsers = await User.insertMany(users)
     
       const adminUser = createdUsers[0]._id
 
@@ -26,7 +28,7 @@ const importData = async () => {
           return {...product, user: adminUser }
       })
 
-        await Product.insertmany(sampleProducts)
+        await Product.insertMany(sampleProducts)
 
         console.log('Data Imported!'.green.inverse)
         process.exit()
